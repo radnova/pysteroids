@@ -28,9 +28,9 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE:
-                    player.shoot(dt)
+            #if event.type == pygame.KEYDOWN:
+                #if event.key == pygame.K_SPACE:
+                    #player.shoot(dt)
          
         for sprite in updatable:
             sprite.update(dt)   
@@ -39,6 +39,7 @@ def main():
             if player.collide(roid):
                 print("Game over!")
                 return
+            
         for shot in shots:
             for roid in roids:
                 if shot.collide(roid):
