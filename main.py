@@ -44,6 +44,7 @@ def main():
             for roid in roids:
                 if shot.collide(roid):
                     shot.kill()
+                    roid.kill()
                     print("Hit!")
             
         screen.fill("Black")
